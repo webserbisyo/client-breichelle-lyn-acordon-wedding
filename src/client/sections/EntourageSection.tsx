@@ -92,9 +92,9 @@ export function EntourageSection({
                           className="relative group/card-wrapper overflow-visible"
                         >
                           {/* Tactile Paper Card */}
-                          <div className="wedding-paper-card bg-white border border-[#B8C7BD] rounded-2xl p-6 sm:p-8 text-center transition-[border-color,box-shadow,transform] duration-500 hover:-translate-y-1 relative z-10 h-full flex flex-col justify-center">
+                          <div className="wedding-paper-card bg-white border border-[color:var(--wedding-divider)] rounded-2xl p-6 sm:p-8 text-center transition-[border-color,box-shadow,transform] duration-500 hover:-translate-y-1 relative z-10 h-full flex flex-col justify-center">
                             <div className="relative z-20">
-                              <h4 className="font-bold uppercase tracking-[0.08em] text-[#324F3E] mb-2 text-sm">
+                              <h4 className="font-bold uppercase tracking-[0.08em] text-[color:var(--wedding-label-on-light)] mb-2 text-sm">
                                 {displayTitle}
                               </h4>
 
@@ -114,7 +114,7 @@ export function EntourageSection({
                                 {displayNames.map((name, j) => (
                                   <li
                                     key={j}
-                                    className="text-[#1B2B22] font-serif text-base sm:text-lg font-semibold"
+                                    className="text-[color:var(--wedding-text-primary)] font-serif text-base sm:text-lg font-semibold"
                                   >
                                     {name}
                                   </li>

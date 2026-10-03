@@ -114,7 +114,7 @@ export function AttireSection({
 
         {/* Standalone Guideline Paragraph */}
         {displayIntro && (
-          <p className="text-[#34483B] text-center text-sm md:text-base leading-relaxed max-w-2xl mt-0 mb-6 sm:mb-8 px-4 relative z-10 transition-opacity duration-300 font-medium">
+          <p className="text-[color:var(--wedding-text-secondary)] text-center text-sm md:text-base leading-relaxed max-w-2xl mt-0 mb-6 sm:mb-8 px-4 relative z-10 transition-opacity duration-300 font-medium">
             {displayIntro}
           </p>
         )}
@@ -123,14 +123,14 @@ export function AttireSection({
         {shouldRenderCard && (
           <AnimatedContent className="w-full max-w-4xl mx-auto">
             <div className="relative overflow-visible">
-              <div className="w-full relative z-10 overflow-hidden wedding-paper-card bg-white border border-[#B8C7BD] p-6 sm:p-8 rounded-3xl">
+              <div className="w-full relative z-10 overflow-hidden wedding-paper-card bg-white border border-[color:var(--wedding-divider)] p-6 sm:p-8 rounded-3xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto text-left">
                   {/* Column 1 — Guest Dress Code */}
                   <div className="flex flex-col">
-                    <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[#3D604C] mb-2">
+                    <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--primary)] mb-2">
                       GUEST DRESS CODE
                     </h4>
-                    <div className="text-sm sm:text-[15px] leading-relaxed text-[#1F2421] font-medium space-y-2 whitespace-pre-line">
+                    <div className="text-sm sm:text-[15px] leading-relaxed text-[color:var(--wedding-text-primary)] font-medium space-y-2 whitespace-pre-line">
                       {displayDressCodeNote.split("\n").map((line, idx) => {
                         const trimmed = line.trim();
                         if (!trimmed) return null;
@@ -142,11 +142,11 @@ export function AttireSection({
                               key={idx}
                               className={
                                 isReminder
-                                  ? "text-xs sm:text-sm text-[#8A3A35] font-semibold mt-2 pt-1 border-t border-[#B8C7BD]/40"
+                                  ? "text-xs sm:text-sm text-[color:var(--wedding-status-error)] font-semibold mt-2 pt-1 border-t border-[color:var(--wedding-divider)]/40"
                                   : ""
                               }
                             >
-                              <strong className="font-semibold text-[#1B2B22]">{match[1]}:</strong>{" "}
+                              <strong className="font-semibold text-[color:var(--wedding-text-primary)]">{match[1]}:</strong>{" "}
                               {match[2]}
                             </p>
                           );
@@ -158,10 +158,10 @@ export function AttireSection({
 
                   {/* Column 2 — Principal Sponsors & Color Palette */}
                   <div className="flex flex-col">
-                    <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[#3D604C] mb-2">
+                    <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--primary)] mb-2">
                       PRINCIPAL SPONSORS
                     </h4>
-                    <div className="text-sm sm:text-[15px] leading-relaxed text-[#1F2421] font-medium space-y-1.5 whitespace-pre-line">
+                    <div className="text-sm sm:text-[15px] leading-relaxed text-[color:var(--wedding-text-primary)] font-medium space-y-1.5 whitespace-pre-line">
                       {displayColorMotifNote.split("\n").map((line, idx) => {
                         const trimmed = line.trim();
                         if (!trimmed) return null;
@@ -169,7 +169,7 @@ export function AttireSection({
                         if (match) {
                           return (
                             <p key={idx}>
-                              <strong className="font-semibold text-[#1B2B22]">{match[1]}:</strong>{" "}
+                              <strong className="font-semibold text-[color:var(--wedding-text-primary)]">{match[1]}:</strong>{" "}
                               {match[2]}
                             </p>
                           );
@@ -180,8 +180,8 @@ export function AttireSection({
 
                     {/* Subhead: SUGGESTED GUEST COLORS & Swatches Block */}
                     {hasPalette && palette && (
-                      <div className="mt-4 pt-3 border-t border-[#B8C7BD]/40">
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-[#3D604C] mt-1 mb-2.5">
+                      <div className="mt-4 pt-3 border-t border-[color:var(--wedding-divider)]/40">
+                        <p className="text-[11px] font-bold uppercase tracking-wider text-[color:var(--primary)] mt-1 mb-2.5">
                           SUGGESTED GUEST COLORS
                         </p>
                         {/* Color Palette Swatches (One horizontal row of equal columns) */}

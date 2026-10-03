@@ -20,8 +20,8 @@ export function ClientMonogram({
   const [firstInitial, secondInitial] = monogram ?? ["R", "J"];
   const sizeClass =
     variant === "footer"
-      ? "w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-56 xl:h-56 ring-1 ring-[#D4AF37]/40"
-      : "w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 ring-1 ring-[#D4AF37]/40 shadow-sm";
+      ? "w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-56 xl:h-56 ring-1 ring-[color:var(--wedding-gold-rich)]/40"
+      : "w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 ring-1 ring-[color:var(--wedding-gold-rich)]/40 shadow-sm";
 
   return (
     <span
@@ -66,7 +66,7 @@ export function ClientMonogram({
         <span className="wedding-monogram-initial font-serif font-semibold">
           {firstInitial}
         </span>
-        <span className="wedding-monogram-ampersand font-serif italic mx-0.5 text-[#D4AF37]">
+        <span className="wedding-monogram-ampersand font-serif italic mx-0.5 text-[color:var(--wedding-monogram-ampersand-fg)]">
           &amp;
         </span>
         <span className="wedding-monogram-initial font-serif font-semibold">

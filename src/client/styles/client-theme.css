@@ -127,6 +127,7 @@
   --wedding-divider: #B8C7BD;
   --wedding-divider-highlight: rgb(255 255 255 / 45%);
   --wedding-panel-border: #B8C7BD;
+  --wedding-card-elevated-border: #A8BDB0;
   --wedding-control-border: #B8C7BD;
   --wedding-focus-ring: #3D604C;
   --wedding-timeline-line: #6B8E7B;
@@ -165,6 +166,13 @@
   --wedding-nav-foreground: #1B2B22;
   --wedding-nav-muted: #34483B;
   --wedding-nav-border: rgba(184, 199, 189, 0.5);
+  --wedding-nav-hero-gradient-start: rgba(23, 35, 28, 0.82);
+  --wedding-nav-hero-gradient-mid: rgba(23, 35, 28, 0.55);
+  --wedding-nav-hero-gradient-end: rgba(23, 35, 28, 0.25);
+  --wedding-nav-hero-blur: 12px;
+  --wedding-dock-bg: var(--wedding-nav-background);
+  --wedding-dock-border: var(--wedding-nav-border);
+  --wedding-dock-shadow: var(--wedding-shadow-floating);
   --wedding-drawer-overlay: rgb(23 21 18 / 50%);
   --wedding-drawer-surface: var(--wedding-surface-ivory);
   --wedding-rsvp-page-background: #DCE6E0;
@@ -893,7 +901,14 @@ h1, h2, h3, .wedding-section-title {
 
 /* STATE A: Over Dark Hero (Unscrolled - data-scrolled="false") */
 .wedding-nav[data-scrolled="false"] {
-  background: linear-gradient(to bottom, rgba(23, 35, 28, 0.78) 0%, rgba(23, 35, 28, 0.30) 70%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--wedding-nav-hero-gradient-start, rgba(23, 35, 28, 0.82)) 0%,
+    var(--wedding-nav-hero-gradient-mid, rgba(23, 35, 28, 0.55)) 60%,
+    var(--wedding-nav-hero-gradient-end, rgba(23, 35, 28, 0.25)) 100%
+  );
+  backdrop-filter: blur(var(--wedding-nav-hero-blur, 12px)) saturate(1.3);
+  -webkit-backdrop-filter: blur(var(--wedding-nav-hero-blur, 12px)) saturate(1.3);
   border-bottom: 0 !important;
   border: none !important;
   box-shadow: none !important;

@@ -69,28 +69,28 @@ export function ExtraInfoSection({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="wedding-paper-card bg-white border border-[#B8C7BD] p-6 sm:p-8 rounded-2xl sm:rounded-3xl relative z-10 h-full flex flex-col justify-center"
+                  className="wedding-paper-card bg-white border border-[color:var(--wedding-divider)] p-6 sm:p-8 rounded-2xl sm:rounded-3xl relative z-10 h-full flex flex-col justify-center"
                 >
                   <div className="relative z-20">
                     {/* Badge Row */}
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-[10px] sm:text-xs font-bold tracking-[0.24em] uppercase text-[#3D604C]">
+                      <span className="text-[10px] sm:text-xs font-bold tracking-[0.24em] uppercase text-[color:var(--primary)]">
                         NOTE {badgeNumber}
                       </span>
-                      <span className="text-[#C5A059] text-xs select-none">✦</span>
+                      <span className="text-[color:var(--wedding-accent-line)] text-xs select-none">✦</span>
                     </div>
 
                     {/* Card Title */}
-                    <h4 className="font-serif text-xl md:text-2xl text-[#1B2B22] font-bold">
+                    <h4 className="font-serif text-xl md:text-2xl text-[color:var(--wedding-text-primary)] font-bold">
                       {item.title}
                     </h4>
 
                     {/* Elegant Divider */}
-                    <div className="h-px w-16 bg-[#B8C7BD] my-4" />
+                    <div className="h-px w-16 bg-[color:var(--wedding-divider)] my-4" />
 
                     {/* Card Body Description */}
                     {item.details && (
-                      <p className="text-[#34483B] text-sm md:text-base leading-relaxed text-balance font-medium">
+                      <p className="text-[color:var(--wedding-text-secondary)] text-sm md:text-base leading-relaxed text-balance font-medium">
                         {item.details}
                       </p>
                     )}

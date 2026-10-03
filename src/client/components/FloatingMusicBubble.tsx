@@ -132,7 +132,7 @@ export function FloatingMusicBubble({ layout = "fixed" }: FloatingMusicBubblePro
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsExpanded((prev) => !prev)}
-        className="w-14 h-14 rounded-full bg-[color:var(--wedding-control-primary-bg)] text-[color:var(--wedding-control-primary-fg)] shadow-[0_8px_24px_rgb(23_49_61_/_25%)] hover:brightness-105 flex items-center justify-center relative group cursor-pointer transition-all duration-300"
+        className="w-14 h-14 rounded-full bg-[color:var(--wedding-control-primary-bg)] text-[color:var(--wedding-control-primary-fg)] shadow-[var(--wedding-shadow-floating)] hover:brightness-105 flex items-center justify-center relative group cursor-pointer transition-all duration-300"
         aria-label="Wedding song controls"
       >
         <AnimatePresence mode="wait">
@@ -158,8 +158,8 @@ export function FloatingMusicBubble({ layout = "fixed" }: FloatingMusicBubblePro
               transition={{ duration: 0.3 }}
               className="relative flex items-center justify-center"
             >
-              <Music4 className="w-6 h-6 opacity-85 text-[#D4AF37]" />
-              <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-[#D4AF37] text-white rounded-full flex items-center justify-center shadow-sm">
+              <Music4 className="w-6 h-6 opacity-85 text-[color:var(--wedding-gold-rich)]" />
+              <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-[color:var(--wedding-gold-rich)] text-white rounded-full flex items-center justify-center shadow-sm">
                 <Play className="w-2 h-2 fill-current translate-x-[0.5px]" />
               </span>
             </motion.div>

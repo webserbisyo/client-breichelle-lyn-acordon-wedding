@@ -283,7 +283,7 @@ export function GuestDockToolbar({
         isHoveredVal.set(1);
         mouseX.set(Infinity);
       }}
-      className={`wedding-guest-dock flex w-fit max-w-full shrink-0 items-end rounded-full bg-white/92 backdrop-blur-md border border-[#B8C7BD] shadow-[0_8px_32px_rgba(35,56,45,0.16),0_2px_6px_rgba(35,56,45,0.08)] ${compact ? "justify-center gap-1.5 px-2 py-2 sm:gap-2 sm:px-3" : "gap-3 px-4 py-2"} ${className}`}
+      className={`wedding-guest-dock flex w-fit max-w-full shrink-0 items-center rounded-full bg-white/92 backdrop-blur-md border border-[color:var(--wedding-dock-border)] shadow-[var(--wedding-dock-shadow)] ${compact ? "justify-center gap-1.5 px-2 py-2.5 sm:gap-2 sm:px-3" : "gap-3 px-4 py-2.5"} ${className}`}
       style={{ height: panelHeight }}
       role="toolbar"
       aria-label="Guest essentials navigation"

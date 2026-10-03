@@ -111,7 +111,7 @@ export function ClientNav({
                 }
               }}
               aria-label={homeLabel}
-              className="wedding-nav-monogram relative flex items-center justify-center shrink-0 rounded-full transition-transform duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]/50"
+              className="wedding-nav-monogram relative flex items-center justify-center shrink-0 rounded-full transition-transform duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--wedding-gold-rich)]/50"
             >
               <ClientMonogram
                 variant="nav"

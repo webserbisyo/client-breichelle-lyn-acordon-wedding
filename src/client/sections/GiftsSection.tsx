@@ -61,7 +61,7 @@ export function GiftsSection({ giftDetails, surface }: GiftsSectionProps) {
           )}
 
           {giftDetails.giftNote && (
-            <p className="mt-8 md:mt-10 mx-auto max-w-2xl text-center text-base md:text-lg leading-relaxed text-[#34483B] font-medium text-balance">
+            <p className="mt-8 md:mt-10 mx-auto max-w-2xl text-center text-base md:text-lg leading-relaxed text-[color:var(--wedding-text-secondary)] font-medium text-balance">
               {giftDetails.giftNote}
             </p>
           )}
@@ -84,14 +84,14 @@ export function GiftsSection({ giftDetails, surface }: GiftsSectionProps) {
                   }
                 >
                   <div className="relative overflow-visible">
-                    <div className="wedding-paper-card bg-white border border-[#B8C7BD] rounded-3xl p-7 sm:p-8 text-center relative z-10 flex flex-col justify-between h-full">
+                    <div className="wedding-paper-card bg-white border border-[color:var(--wedding-divider)] rounded-3xl p-7 sm:p-8 text-center relative z-10 flex flex-col justify-between h-full">
                       {/* Top Section — Text details */}
                       <div className="mb-6 relative z-20">
-                        <h4 className="font-serif text-xl md:text-2xl text-[#1B2B22] font-bold mb-2">
+                        <h4 className="font-serif text-xl md:text-2xl text-[color:var(--wedding-text-primary)] font-bold mb-2">
                           {opt.title}
                         </h4>
                         {opt.description && (
-                          <p className="text-[#34483B] text-sm max-w-xs mx-auto text-balance font-medium">
+                          <p className="text-[color:var(--wedding-text-secondary)] text-sm max-w-xs mx-auto text-balance font-medium">
                             {opt.description}
                           </p>
                         )}
@@ -102,7 +102,7 @@ export function GiftsSection({ giftDetails, surface }: GiftsSectionProps) {
                         {opt.image?.url && (
                           <div className="w-full">
                             {/* Solid White QR Plate for phone scan contrast */}
-                            <div className="bg-white border border-[#B8C7BD] rounded-2xl p-4 shadow-sm flex items-center justify-center mx-auto w-full max-w-[260px]">
+                            <div className="bg-white border border-[color:var(--wedding-divider)] rounded-2xl p-4 shadow-sm flex items-center justify-center mx-auto w-full max-w-[260px]">
                               <img
                                 src={opt.image.url}
                                 alt={opt.image.alt || opt.title}
@@ -110,7 +110,7 @@ export function GiftsSection({ giftDetails, surface }: GiftsSectionProps) {
                                 className="w-full max-w-[220px] h-auto object-contain pointer-events-none select-none opacity-100"
                               />
                             </div>
-                            <p className="mt-4 text-[10px] sm:text-xs uppercase tracking-[0.18em] text-[#34483B] font-bold select-none">
+                            <p className="mt-4 text-[10px] sm:text-xs uppercase tracking-[0.18em] text-[color:var(--wedding-text-secondary)] font-bold select-none">
                               SCAN TO SEND YOUR GIFT
                             </p>
                           </div>

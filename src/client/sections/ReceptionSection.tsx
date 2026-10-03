@@ -80,12 +80,12 @@ export function ReceptionSection({
         <FadeContent>
           <div className="relative overflow-visible">
             <SpotlightCard
-              className="wedding-paper-card-elevated bg-white border border-[#A8BDB0] p-6 sm:p-10 rounded-3xl"
+              className="wedding-paper-card-elevated bg-white border border-[color:var(--wedding-card-elevated-border)] p-6 sm:p-10 rounded-3xl"
               spotlightColor="rgba(61, 96, 76, 0.08)"
             >
               <div className="space-y-6 sm:space-y-8 relative z-20">
                 {/* Reception Venue Photo with Watermark Mitigation */}
-                <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-2xl overflow-hidden border border-[#B8C7BD]/50 shadow-md">
+                <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-2xl overflow-hidden border border-[color:var(--wedding-divider)]/50 shadow-md">
                   <Image
                     src="/template-assets/photos/venue/reception-venue.webp"
                     alt="The Barn at Grand Terraza"
@@ -97,18 +97,18 @@ export function ReceptionSection({
 
                 {/* Venue Name & Full Address */}
                 {(reception.venueName || reception.fullAddress) && (
-                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[#FAF7F2]/60">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#FAF4E8] flex items-center justify-center border border-[#C5A059]/40 text-[#3D604C] shadow-sm">
+                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[color:var(--wedding-surface-champagne)]/60">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[color:var(--wedding-timeline-badge-bg)] flex items-center justify-center border border-[color:var(--wedding-accent-line)]/40 text-[color:var(--primary)] shadow-sm">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
                       {reception.venueName && (
-                        <h3 className="font-serif text-lg sm:text-xl font-bold text-[#1B2B22] leading-snug">
+                        <h3 className="font-serif text-lg sm:text-xl font-bold text-[color:var(--wedding-text-primary)] leading-snug">
                           {reception.venueName}
                         </h3>
                       )}
                       {reception.fullAddress && (
-                        <p className="text-[#34483B] text-sm md:text-base mt-1.5 leading-relaxed font-medium">
+                        <p className="text-[color:var(--wedding-text-secondary)] text-sm md:text-base mt-1.5 leading-relaxed font-medium">
                           {reception.fullAddress}
                         </p>
                       )}
@@ -118,21 +118,21 @@ export function ReceptionSection({
 
                 {/* Reconstructed Date & Time Row */}
                 {(derivedDate || hasTimeRange) && (
-                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[#FAF7F2]/60">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#FAF4E8] flex items-center justify-center border border-[#C5A059]/40 text-[#3D604C] shadow-sm">
+                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[color:var(--wedding-surface-champagne)]/60">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[color:var(--wedding-timeline-badge-bg)] flex items-center justify-center border border-[color:var(--wedding-accent-line)]/40 text-[color:var(--primary)] shadow-sm">
                       <Clock3 className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-serif text-base font-semibold text-[#1B2B22]">
+                      <h4 className="font-serif text-base font-semibold text-[color:var(--wedding-text-primary)]">
                         Time
                       </h4>
                       {derivedDate && (
-                        <p className="text-[#34483B] text-sm md:text-base mt-1.5 font-medium leading-relaxed">
+                        <p className="text-[color:var(--wedding-text-secondary)] text-sm md:text-base mt-1.5 font-medium leading-relaxed">
                           {derivedDate}
                         </p>
                       )}
                       {formattedTimeRange && (
-                        <p className="inline-block text-[#3D604C] font-bold tracking-widest text-xs uppercase mt-2 bg-[#FAF4E8] px-3 py-1 rounded-full border border-[#C5A059]/30">
+                        <p className="inline-block text-[color:var(--primary)] font-bold tracking-widest text-xs uppercase mt-2 bg-[color:var(--wedding-timeline-badge-bg)] px-3 py-1 rounded-full border border-[color:var(--wedding-accent-line)]/30">
                           {formattedTimeRange}
                         </p>
                       )}
@@ -142,15 +142,15 @@ export function ReceptionSection({
 
                 {/* Reception Note */}
                 {reception.receptionNote && (
-                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[#FAF7F2]/60">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#FAF4E8] flex items-center justify-center border border-[#C5A059]/40 text-[#3D604C] shadow-sm">
+                  <div className="flex gap-4 sm:gap-6 items-start p-2 sm:p-3 -mx-2 sm:-mx-3 rounded-2xl transition-colors hover:bg-[color:var(--wedding-surface-champagne)]/60">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[color:var(--wedding-timeline-badge-bg)] flex items-center justify-center border border-[color:var(--wedding-accent-line)]/40 text-[color:var(--primary)] shadow-sm">
                       <Sparkles className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-serif text-base font-semibold text-[#1B2B22]">
+                      <h4 className="font-serif text-base font-semibold text-[color:var(--wedding-text-primary)]">
                         Note
                       </h4>
-                      <p className="text-[#34483B] text-sm md:text-base mt-1.5 leading-relaxed font-medium">
+                      <p className="text-[color:var(--wedding-text-secondary)] text-sm md:text-base mt-1.5 leading-relaxed font-medium">
                         {reception.receptionNote}
                       </p>
                     </div>

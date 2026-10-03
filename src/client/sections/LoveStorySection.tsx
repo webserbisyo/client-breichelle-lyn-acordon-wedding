@@ -126,12 +126,12 @@ export function LoveStorySection({
               threshold={0.05}
             >
               {/* Romantic Narrative Body */}
-              <p className="text-[#1B2B22] font-serif italic text-base sm:text-lg md:text-xl leading-8 md:leading-9 whitespace-pre-line text-center font-medium">
+              <p className="text-[color:var(--wedding-text-primary)] font-serif italic text-base sm:text-lg md:text-xl leading-8 md:leading-9 whitespace-pre-line text-center font-medium">
                 {storyBody}
               </p>
             </FadeContent>
           ) : (
-            <p className="text-[#34483B] font-serif italic text-base font-medium">
+            <p className="text-[color:var(--wedding-text-secondary)] font-serif italic text-base font-medium">
               Our story is being written...
             </p>
           )}
